@@ -40,7 +40,7 @@
 		function aiTurn(){
 			isAiThinking = true;
 			setTimeout(function(){
-				var aiMove = minimax(currentState,transform,allMoves,score);
+				var aiMove = Arrays.shuffle(minimax(currentState,transform,allMoves,score))[0];
 				isAiThinking = false;
 				currentState = transform(currentState,aiMove);
 				aiPlay(aiMove);

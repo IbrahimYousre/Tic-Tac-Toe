@@ -1,7 +1,7 @@
 $(function(){
 	var colors = ["red","blue"];
 	var colorIndex = 0;
-	var game = new Game(doAiMove, gameEnded,"x");
+	var game = new Game(doAiMove, gameEnded);
 	$(".cell").toArray().forEach(function(el,i){
 		$(el).click(function(){
 			try{

@@ -84,12 +84,12 @@
 	}
 	State.advancedScore = function(player){
 			return function(state){
-				var scoreX = state.score();
-				scoreX-=state.board.reduce(function(acc,e){
-					if(e!==""&&e!=player)return acc+1;
-					return acc;
-				},0);
-				return scoreX*((player===Player.x)?1:-1);
+				var score = state.score();
+				if(score<0)// x is going to lose
+					score+=state.board.join("").length;
+				else if(score>0)// x is going to win
+					score-=state.board.join("").length;
+				return score*((player===Player.x)?1:-1);
 			}
 	}
 	State.allMoves = function(state){

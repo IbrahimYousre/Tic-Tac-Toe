@@ -8,6 +8,7 @@
 */
 (function(){
 	minimax = function(currentState, transform, allMoves, score){
+		if(Arrays.equals(currentState.board,["","","",	"","","",	"","",""]))return allMoves(currentState);
 		var moves = allMoves(currentState);
 		var scores = moves.map(function(move){
 			return minimaxValue(1,transform(currentState,move),transform,allMoves,score);
@@ -18,6 +19,7 @@
 		});
 	}
 	minimaxValue = function(depth, currentState, transform, allMoves, score){
+		if(Arrays.equals(currentState.board,["","","",	"","","",	"","",""]))return 0;
 		var s = score(currentState);
 		if(!isNaN(s)){
 			return s;

@@ -86,7 +86,6 @@ function assertTrue(check,callBack,message){
 			score: 0,
 			moves: [1,2,3,5,6,7,8]
 		},
-		/*
 		{
 			state: new State([
 				"","","",
@@ -95,7 +94,6 @@ function assertTrue(check,callBack,message){
 			score: 0,
 			moves: [0,1,2,3,4,5,6,7,8]
 		},
-		*/
 		// more situations
 		{
 			state: new State([

@@ -7,6 +7,12 @@
 		an integer [0:8] indicating the cell to play into
 */
 (function(){
+	// local constant
+	var funnyErrors = [
+		"Hey! Are you looking for something!",
+		"Hey! Are you wasting my time!",
+		"Hey! Are you lost?"
+	];
 	// global constant better to be static memeber of State
 	Player = {
 		x:"x",
@@ -55,11 +61,11 @@
 		return NaN;
 	};
 	State.prototype.gameEnded = function (){
-		if(this.score())return true;
-		return false;
+		return !isNaN(this.score());
 	};
 	// static methods
 	State.transform = function(state,move){
+		if(state.board[move])throw new Error(funnyErrors[Math.floor(Math.random()*funnyErrors.length)]);
 		state = state.clone();
 		state.board[move] = state.currentPlayer;
 		state.currentPlayer = state.nextPlayer();

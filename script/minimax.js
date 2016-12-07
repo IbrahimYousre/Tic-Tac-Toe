@@ -18,10 +18,10 @@
 		});
 	}
 	minimaxValue = function(depth, currentState, transform, allMoves, score){
-		try{
-			// terminal case
-			return score(currentState);
-		}catch(e){
+		var s = score(currentState);
+		if(!isNaN(s)){
+			return s;
+		}else{
 			var scores = allMoves(currentState).map(function(move){
 				return minimaxValue(depth+1,transform(currentState,move),transform,allMoves,score);
 			});

@@ -15,24 +15,24 @@ Arrays.equals = function(arr1,arr2){
 }
 Arrays.shuffle = function(array){
 	var i,j,l,tmp;
-	for (i = 0, l = array.length; i < l; i++) {
+	for(i=0,l=array.length;i<l;i++){
 		j = Math.floor(Math.random()*l);
 		tmp = array[i];
 		array[i] = array[j];
-		array[j] = array[i];
+		array[j] = tmp;
 	}
 	return array;
 }
 Arrays.min = function(array){
-	var m = array[0];
-	for(var i=1,l=array.length;i<l;i++){
+	var i,l,m = array[0];
+	for(i=1,l=array.length;i<l;i++){
 		m = m<array[i]?m:array[i];
 	}
 	return m;
 }
 Arrays.max = function(array){
-	var m = array[0];
-	for(var i=1,l=array.length;i<l;i++){
+	var i,l,m = array[0];
+	for(i=1,l=array.length;i<l;i++){
 		m = m>array[i]?m:array[i];
 	}
 	return m;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tutorial.css">
+
+	<script type="text/javascript" src="script/jquery.min.js"></script>
+	<script type="text/javascript" src="script/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="script/utils.js"></script>
+	<script type="text/javascript" src="script/minimax.js"></script>
+	<script type="text/javascript" src="script/state.js"></script>
+
+	<title>Tic Tac Toe tutorial</title>
+</head>
+<body>
+	<script type="text/javascript" src="script/tutorial.js"></script>
+	<h1 class="text-center">Welcome to Tic Tac Toe tutorial</h1>
+	<div class="container text-center">
+		<p>
+			Tic-tac-toe (also known as XO) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+		</p>
+		<p>
+			By optimal play the first player is able to win or draw in each game. The game has only 13 possible opening positions 7 of which will make the first player win.
+		</p>
+		<div>
+			<button id="all" class="btn btn-primary active">All Opening</button>
+			<button id="win" class="btn btn-primary">Win Opening Only</button>
+		</div>
+		<div id="table"></div>
+	</div>
+</body>
+</html>

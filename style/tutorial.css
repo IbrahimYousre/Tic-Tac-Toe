@@ -1,0 +1,51 @@
+.container{
+	max-width:600px;
+}
+p{
+	text-align: justify;
+}
+p:last-of-type{
+	margin-bottom: 20px
+}
+a{
+	cursor: pointer;
+}
+#table{
+	margin-top: 30px;
+}
+.board{
+	margin: auto;
+	padding: 2px;
+	width: 138px;
+	border: 1px solid #777;
+	background-color: #222;
+}
+.cell{
+	width: 40px;
+	height: 40px;
+	margin: 2px;
+	background-color: #555;
+	float: left;
+	line-height: 40px;
+}
+.result-container{
+	height:138px;
+	display: flex;
+	align-items: center; 
+}
+.result-container div{
+	text-align: center;
+	width:100%;
+}
+.row{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+.row:first-of-type{
+	border-top: 1px solid black;
+}
+.o{
+}
+.x{
+}

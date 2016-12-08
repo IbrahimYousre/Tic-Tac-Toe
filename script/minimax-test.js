@@ -103,6 +103,46 @@ function assertTrue(check,callBack,message){
 			score: 10,
 			moves: [0,2,3,5,6,8]
 		},
+		{
+			state: new State([
+				"","","",
+				"x","o","",
+				"","","",],Player.x),
+			score: 0,
+			moves: [0,1,2,6,7,8]
+		},
+		{
+			state: new State([
+				"","","",
+				"x","","o",
+				"","","",],Player.x),
+			score: 0,
+			moves: [0,1,2,4,6,7,8]
+		},
+		{
+			state: new State([
+				"o","","",
+				"x","","",
+				"","","",],Player.x),
+			score: 0,
+			moves: [1,2,4,8]
+		},
+		{
+			state: new State([
+				"","o","",
+				"x","","",
+				"","","",],Player.x),
+			score: 0,
+			moves: [0,2,4,5,6,7,8]
+		},
+		{
+			state: new State([
+				"","","o",
+				"x","","",
+				"","","",],Player.x),
+			score: 0,
+			moves: [0,1,4,5,6,7,8]
+		},
 	]
 	function printBoard(state){
 		console.log(state.board.slice(0,3));

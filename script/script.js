@@ -1,7 +1,8 @@
 $(function(){
+	var ai = confirm("Do you want to play as X ?")===true?Player.o:Player.x;
 	var marks = ["X","O"];
 	var markIndex = 0;
-	var game = new Game(doAiMove, gameEnded);
+	var game = new Game(doAiMove, gameEnded,ai);
 	$(".cell").toArray().forEach(function(el,i){
 		$(el).click(function(){
 			try{

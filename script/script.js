@@ -1,19 +1,19 @@
 $(function(){
-	var colors = ["red","blue"];
-	var colorIndex = 0;
+	var marks = ["X","O"];
+	var markIndex = 0;
 	var game = new Game(doAiMove, gameEnded);
 	$(".cell").toArray().forEach(function(el,i){
 		$(el).click(function(){
 			try{
 				game.userInput(i);
-				$(el).css("background-color",colors[colorIndex++%2]);
+				$(el).text(marks[markIndex++%2]);
 			}catch(e){
 				alert(e.message);
 			}
 		});
 	});
 	function doAiMove(move){
-		$($(".cell")[move]).css("background-color",colors[colorIndex++%2]);
+		$($(".cell")[move]).text(marks[markIndex++%2]);
 	}
 	function gameEnded(score){
 		setTimeout(function(){
@@ -22,8 +22,8 @@ $(function(){
 		},100);
 	}
 	function reset(){
-		$(".cell").css("background-color","");
-		colorIndex = 0;
+		$(".cell").text("");
+		markIndex = 0;
 		game.reset();
 	}
 });
